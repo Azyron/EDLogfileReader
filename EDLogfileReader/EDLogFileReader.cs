@@ -15,12 +15,6 @@ namespace EDLogfileReader
 {
     public partial class EDLogFileReader : Form
     {
-
-        //public static Version version = new Version(0, 5, System.Deployment.Application.ApplicationDeployment.)
-
-        Assembly assembly = Assembly.GetExecutingAssembly();
-        Version versionInfo = Assembly.GetExecutingAssembly().GetName().Version;
-
         //private EDLogFileWatcher watcher = null;
         private EDLogFilePoll watcher = null;
         delegate void SetTextCallback(String text);
