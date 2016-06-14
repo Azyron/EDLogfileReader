@@ -22,10 +22,9 @@ value there, so you can enter 1,000,000 light years traveled if you think
 that's nice.
 
 After starting for the first time you'll have to tell the tool where your logs
-are located. Usually this is a path in the following form (where you'll have
-to replace the <username>):
+are located. Usually this is a path in the following form:
 
 ```
-C:\Users\<username>\AppData\Local\Frontier_Developments\Products\elite-dangerous-64\Logs
+C:\Users\<put-your-username-here>\AppData\Local\Frontier_Developments\Products\elite-dangerous-64\Logs
 ```
 
