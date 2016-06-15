@@ -34,11 +34,13 @@ namespace EDLogfileReader
         {
             string distanceAsString = getAppSetting("DistanceTraveled");
             string showSolDistanceAsString = getAppSetting("ShowSolDistance");
+            string showDistanceTraveledAsString = getAppSetting("ShowDistanceTraveled");
             this.distanceTraveled = distanceAsString == null ? 0 : double.Parse(distanceAsString);
 
             this.edLogPath = getAppSetting("EDLogsPath");
             this.outputFileName = getAppSetting("OutputFileName");
             this.showSolDistance = String.IsNullOrEmpty(showSolDistanceAsString) ? false : bool.Parse(showSolDistanceAsString);
+            this.showDistanceTraveled = String.IsNullOrEmpty(showDistanceTraveledAsString) ? false : bool.Parse(showDistanceTraveledAsString);
 
             //this.edLogPath = "C:\\Users\\<home>\\AppData\\Local\\Frontier_Developments\\Products\\elite-dangerous-64\\Logs";
             watcher = new EDLogFilePoll(edLogPath, new EDLogFilePoll.SystemChangeNotificationDelegate(systemChangeNotification));
@@ -236,7 +238,7 @@ namespace EDLogfileReader
             if (this.showSolDistance) { boxOutput += ", " + d.ToString(culture) + " LY from Sol"; }
             if (this.showDistanceTraveled)
             {
-                boxOutput += ", " + Math.Round(distanceTraveled, 2, MidpointRounding.AwayFromZero).ToString(culture) + " traveled";
+                boxOutput += ", " + Math.Round(distanceTraveled, 2, MidpointRounding.AwayFromZero).ToString(culture) + " LY traveled";
             }
             boxOutput += "." + Environment.NewLine;
             this.appendLogBoxText(boxOutput);
@@ -297,6 +299,14 @@ namespace EDLogfileReader
         {
             this.showSolDistance = newValue;
             setAppSetting("ShowSolDistance", this.showSolDistance.ToString());
+            saveAppSettings();
+        }
+
+
+        public void setShowDistanceTraveled(Boolean newValue)
+        {
+            this.showDistanceTraveled = newValue;
+            setAppSetting("ShowDistanceTraveled", this.showDistanceTraveled.ToString());
             saveAppSettings();
         }
     }

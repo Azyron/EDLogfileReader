@@ -25,6 +25,7 @@ namespace EDLogfileReader
             textBox1.Text = readerInstance.getLogsPath();
             outputFileBox.Text = readerInstance.getOutputFileName();
             EnableDistanceToSol.Checked = readerInstance.showSolDistance;
+            ShowTraveledSoFarBox.Checked = readerInstance.showDistanceTraveled;
         }
 
 
@@ -99,6 +100,7 @@ namespace EDLogfileReader
         private void onShowTraveledSoFarBoxChanged(object sender, EventArgs e)
         {
             // ShowTraveledSoFarBox
+            readerInstance.setShowDistanceTraveled(ShowTraveledSoFarBox.Checked);
         }
 
 
