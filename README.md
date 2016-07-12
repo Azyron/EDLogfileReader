@@ -28,3 +28,4 @@ are located. Usually this is a path in the following form:
 C:\Users\<put-your-username-here>\AppData\Local\Frontier_Developments\Products\elite-dangerous-64\Logs
 ```
 
+![Example screenshot](/Example-Screenshot.png?raw=true "Example Screenshot")
