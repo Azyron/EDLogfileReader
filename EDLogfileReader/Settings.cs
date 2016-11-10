@@ -21,11 +21,24 @@ namespace EDLogfileReader
 
             InitializeComponent();
 
+            if (string.IsNullOrEmpty(readerInstance.getLogsPath()))
+            {
+                textBox1.Text = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Frontier_Developments\\Products\\elite-dangerous-64\\Logs";
+            }
+            else
+            {
+                textBox1.Text = readerInstance.getLogsPath();
+            }
+
             DistanceTraveledBox.Text = readerInstance.getDistanceTraveled().ToString();
-            textBox1.Text = readerInstance.getLogsPath();
             outputFileBox.Text = readerInstance.getOutputFileName();
             EnableDistanceToSol.Checked = readerInstance.showSolDistance;
             ShowTraveledSoFarBox.Checked = readerInstance.showDistanceTraveled;
+            ShowDestinationBox.Checked = readerInstance.showDestination;
+            DestinationBox.Text = readerInstance.destinationName;
+            destinationX.Text = readerInstance.destinationPosition.X.ToString();
+            destinationZ.Text = readerInstance.destinationPosition.Y.ToString();
+            destinationY.Text = readerInstance.destinationPosition.Z.ToString();
         }
 
 
@@ -49,6 +62,13 @@ namespace EDLogfileReader
                 readerInstance.setDistanceTraveled(newValue);
                 readerInstance.setLogsPath(textBox1.Text);
                 readerInstance.setShowSolDistance(EnableDistanceToSol.Checked);
+                readerInstance.setShowDestination(ShowDestinationBox.Checked);
+                readerInstance.setDestinationName(DestinationBox.Text);
+                double x = double.Parse(destinationX.Text);
+                double y = double.Parse(destinationZ.Text);
+                double z = double.Parse(destinationY.Text);
+                readerInstance.setDestinationPosition(new Position(x, y, z));
+                readerInstance.setOutputFileName(outputFileBox.Text);
                 this.Dispose();
             }
             catch

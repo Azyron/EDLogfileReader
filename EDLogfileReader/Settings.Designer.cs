@@ -39,7 +39,7 @@
             this.DestinationBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.destinationX = new System.Windows.Forms.TextBox();
             this.EnableDistanceToSol = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.outputFileBox = new System.Windows.Forms.TextBox();
@@ -49,8 +49,8 @@
             this.ShowTraveledSoFarBox = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ShowDestinationBox = new System.Windows.Forms.CheckBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.destinationY = new System.Windows.Forms.TextBox();
+            this.destinationZ = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -126,7 +126,6 @@
             // 
             // DestinationBox
             // 
-            this.DestinationBox.Enabled = false;
             this.DestinationBox.Location = new System.Drawing.Point(348, 9);
             this.DestinationBox.Name = "DestinationBox";
             this.DestinationBox.Size = new System.Drawing.Size(261, 20);
@@ -135,7 +134,6 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Enabled = false;
             this.label2.Location = new System.Drawing.Point(253, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 13);
@@ -146,7 +144,6 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Enabled = false;
             this.label3.Location = new System.Drawing.Point(224, 41);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(118, 13);
@@ -154,13 +151,12 @@
             this.label3.Text = "Destination coordinates";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox2
+            // destinationX
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(348, 38);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(83, 20);
-            this.textBox2.TabIndex = 10;
+            this.destinationX.Location = new System.Drawing.Point(348, 38);
+            this.destinationX.Name = "destinationX";
+            this.destinationX.Size = new System.Drawing.Size(83, 20);
+            this.destinationX.TabIndex = 10;
             // 
             // EnableDistanceToSol
             // 
@@ -233,7 +229,6 @@
             // ShowDestinationBox
             // 
             this.ShowDestinationBox.AutoSize = true;
-            this.ShowDestinationBox.Enabled = false;
             this.ShowDestinationBox.Location = new System.Drawing.Point(4, 11);
             this.ShowDestinationBox.Name = "ShowDestinationBox";
             this.ShowDestinationBox.Size = new System.Drawing.Size(150, 17);
@@ -241,29 +236,27 @@
             this.ShowDestinationBox.Text = "Show destination distance";
             this.ShowDestinationBox.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // destinationY
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(437, 38);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(83, 20);
-            this.textBox3.TabIndex = 21;
+            this.destinationY.Location = new System.Drawing.Point(437, 38);
+            this.destinationY.Name = "destinationY";
+            this.destinationY.Size = new System.Drawing.Size(83, 20);
+            this.destinationY.TabIndex = 21;
             // 
-            // textBox4
+            // destinationZ
             // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(526, 38);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(83, 20);
-            this.textBox4.TabIndex = 22;
+            this.destinationZ.Location = new System.Drawing.Point(526, 38);
+            this.destinationZ.Name = "destinationZ";
+            this.destinationZ.Size = new System.Drawing.Size(83, 20);
+            this.destinationZ.TabIndex = 22;
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.destinationZ);
+            this.panel2.Controls.Add(this.destinationY);
             this.panel2.Controls.Add(this.ShowDestinationBox);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.destinationX);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.DestinationBox);
@@ -340,7 +333,7 @@
         private System.Windows.Forms.TextBox DestinationBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox destinationX;
         private System.Windows.Forms.CheckBox EnableDistanceToSol;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox outputFileBox;
@@ -350,8 +343,8 @@
         private System.Windows.Forms.CheckBox ShowTraveledSoFarBox;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.CheckBox ShowDestinationBox;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox destinationY;
+        private System.Windows.Forms.TextBox destinationZ;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.CheckBox checkBox1;

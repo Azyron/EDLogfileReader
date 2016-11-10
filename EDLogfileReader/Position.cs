@@ -33,6 +33,9 @@ namespace EDLogfileReader
 
         public double distanceTo(Position otherPosition)
         {
+            double a = X - otherPosition.X;
+            double b = Y - otherPosition.Y;
+            double c = Z - otherPosition.Z;
             return Math.Sqrt(Math.Pow(Math.Abs(X - otherPosition.X), 2) + Math.Pow(Math.Abs(Y - otherPosition.Y), 2) + Math.Pow(Math.Abs(Z - otherPosition.Z), 2));
         }
     }
