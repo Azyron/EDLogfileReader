@@ -1,4 +1,11 @@
 
+## \[DEPRECATED\]
+This tool originates from a time where E:D did not write journal data, which contains much more information than the net|debug logs which are used by this EDLogFileReader.
+
+There's currently a prototype for stream info parsing in the works. Once it's working sufficiently well I'll upload it in to the “ED-Stream-Info-Parser” repository.
+
+
+
 # About EDLogFileReader
 
 This is a very simplistic logfile reader for Elite Dangerous.
